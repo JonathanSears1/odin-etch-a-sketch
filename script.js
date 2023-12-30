@@ -8,12 +8,10 @@ let mouse = false
 let gridSize = 16
 toggleEraser.addEventListener("click",() => {
     if (eraser == true) {
-        console.log(eraser)
         eraser = false
         toggleEraser.setAttribute("background-color","#707070")
     }
     else {
-        console.log(eraser)
         eraser = true
         toggleEraser.setAttribute("background-color","#b02e2e")
     }
@@ -35,7 +33,7 @@ function createGrid() {
             square.style.width = "25%"
             square.style.height = "100%"
             square.style.flex = "auto"
-            square.style.border = "dashed"
+            square.style.border = "solid"
             square.style.borderWidth = "1px"
             square.addEventListener("mouseover",() => {
                 if (eraser) {
@@ -58,6 +56,7 @@ createGrid()
 reset.addEventListener("click", () => {deleteGrid(); createGrid()})
 changeSize.addEventListener("click", () => {
     gridSize = userGridSize.value
+    userGridSize.value = ""
     deleteGrid()
     createGrid()
 })

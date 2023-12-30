@@ -8,8 +8,26 @@
     <script src = "script.js" defer></script>
 </head>
 <body>
-    <div id = "container">
-        
+    <h1 id = "header">Draw something!</h1>
+    <div class = "wrapper">
+        <div id = "options_wrapper">
+            <h2>Options:</h2>
+            <div id = "options">
+                <div class = "option">
+                    <span>Grid Size:</span>
+                    <input id = "user_grid_size" type="number"> 
+                    <button class = "enter" id = "size">Enter</button>
+                </div>
+                <div class="option">
+                    <button id = "eraser">Toggle Eraser</button>
+                </div>
+                <div class="option">
+                    <button id = "reset">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div id = "container">
+        </div>
     </div>
 </body>
 </html>
